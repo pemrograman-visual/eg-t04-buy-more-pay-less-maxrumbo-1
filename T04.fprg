@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Try T04"/>
+        <attribute name="authors" value="swast"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-06 03:47:17 pm"/>
+        <attribute name="created" value="c3dhc3Q7U1dBU1RJU0lIT01CSU5HOzIwMjQtMTAtMzA7MTA6MDQ6MzIgQU07Mjk2MA=="/>
+        <attribute name="edited" value="c3dhc3Q7U1dBU1RJU0lIT01CSU5HOzIwMjQtMTAtMzA7MDM6NDQ6MDggUE07MzszMDk0"/>
+        <attribute name="edited" value="TGVub3ZvO0xBUFRPUC1EMU9DMjNLNjsyMDI0LTExLTA2OzAzOjQ3OjE3IHBtOzI7MzA4NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ISBN" type="String" array="True" size="3"/>
+            <declare name="JumlahBuku" type="Integer" array="True" size="3"/>
+            <assign variable="JumlahBuku[0]" expression="0"/>
+            <assign variable="JumlahBuku[1]" expression="0"/>
+            <assign variable="JumlahBuku[2]" expression="0"/>
+            <declare name="Harga" type="Real" array="True" size="3"/>
+            <assign variable="Harga[0]" expression="0"/>
+            <assign variable="Harga[1]" expression="0"/>
+            <assign variable="Harga[2]" expression="0"/>
+            <declare name="TotalHarga" type="Real" array="True" size="3"/>
+            <assign variable="TotalHarga[0]" expression="0"/>
+            <assign variable="TotalHarga[1]" expression="0"/>
+            <assign variable="TotalHarga[2]" expression="0"/>
+            <declare name="TotalAkhir1" type="Real" array="False" size=""/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="0"/>
+            <declare name="JumlahBuku0, JumlahBuku1, JumlahBuku2" type="Integer" array="False" size=""/>
+            <assign variable="JumlahBuku0" expression="0"/>
+            <assign variable="JumlahBuku1" expression="0"/>
+            <assign variable="JumlahBuku2" expression="0"/>
+            <declare name="Buku0, Buku1, Buku2" type="String" array="False" size=""/>
+            <assign variable="Buku0" expression="&quot;Buku&quot;"/>
+            <assign variable="Buku1" expression="&quot;Buku&quot;"/>
+            <assign variable="Buku2" expression="&quot;Buku&quot;"/>
+            <declare name="nol, satu, dua" type="Integer" array="False" size=""/>
+            <assign variable="nol" expression="0"/>
+            <assign variable="satu" expression="1"/>
+            <assign variable="dua" expression="2"/>
+            <do expression="X&lt;3">
+                <input variable="ISBN[X]"/>
+                <if expression="ISBN[X]==&quot;---&quot;">
+                    <then>
+                        <assign variable="X" expression="3"/>
+                    </then>
+                    <else>
+                        <if expression="ISBN[X]==ISBN[0]">
+                            <then>
+                                <if expression="nol=0">
+                                    <then>
+                                        <assign variable="Buku0" expression="ISBN[X]"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                                <if expression="ISBN[0]==Buku0">
+                                    <then>
+                                        <assign variable="X" expression="0"/>
+                                        <input variable="Harga[X]"/>
+                                        <input variable="JumlahBuku[X]"/>
+                                        <assign variable="JumlahBuku0" expression="JumlahBuku0+JumlahBuku[X]"/>
+                                        <assign variable="nol" expression="3"/>
+                                        <assign variable="X" expression="X+1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="satu=1">
+                                            <then>
+                                                <assign variable="Buku1" expression="ISBN[X]"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                        <if expression="ISBN[0]=Buku1">
+                                            <then>
+                                                <assign variable="X" expression="1"/>
+                                                <input variable="Harga[X]"/>
+                                                <input variable="JumlahBuku[X]"/>
+                                                <assign variable="JumlahBuku1" expression="JumlahBuku1+JumlahBuku[X]"/>
+                                                <assign variable="nol" expression="3"/>
+                                                <assign variable="X" expression="X+1"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="X" expression="2"/>
+                                                <input variable="Harga[X]"/>
+                                                <input variable="JumlahBuku[X]"/>
+                                                <assign variable="JumlahBuku2" expression="JumlahBuku2+JumlahBuku[X]"/>
+                                                <assign variable="nol" expression="3"/>
+                                                <assign variable="X" expression="0"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="ISBN[X]==ISBN[1]">
+                                    <then>
+                                        <if expression="satu=1">
+                                            <then>
+                                                <assign variable="Buku1" expression="ISBN[X]"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                        <if expression="ISBN[1]=Buku1">
+                                            <then>
+                                                <assign variable="X" expression="1"/>
+                                                <input variable="Harga[X]"/>
+                                                <input variable="JumlahBuku[X]"/>
+                                                <assign variable="JumlahBuku1" expression="JumlahBuku1+JumlahBuku[X]"/>
+                                                <assign variable="satu" expression="3"/>
+                                                <assign variable="X" expression="X+1"/>
+                                            </then>
+                                            <else>
+                                                <assign variable="X" expression="2"/>
+                                                <input variable="Harga[X]"/>
+                                                <input variable="JumlahBuku[X]"/>
+                                                <assign variable="JumlahBuku2" expression="JumlahBuku2+JumlahBuku[X]"/>
+                                                <assign variable="satu" expression="3"/>
+                                                <assign variable="X" expression="0"/>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="ISBN[X]==ISBN[2]">
+                                            <then>
+                                                <if expression="dua=2">
+                                                    <then>
+                                                        <assign variable="Buku2" expression="ISBN[X]"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                                <if expression="ISBN[2]==Buku2">
+                                                    <then>
+                                                        <assign variable="X" expression="2"/>
+                                                        <input variable="Harga[X]"/>
+                                                        <input variable="JumlahBuku[X]"/>
+                                                        <assign variable="dua" expression="3"/>
+                                                        <assign variable="X" expression="0"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+            <if expression="JumlahBuku0&gt;=20">
+                <then>
+                    <assign variable="Harga[0]" expression="Harga[0]-Harga[0]*12/100"/>
+                </then>
+                <else>
+                    <if expression="JumlahBuku0&gt;=10">
+                        <then>
+                            <assign variable="Harga[0]" expression="Harga[0]-Harga[0]*5/100"/>
+                        </then>
+                        <else>
+                            <if expression="JumlahBuku0&gt;=5">
+                                <then>
+                                    <assign variable="Harga[0]" expression="Harga[0]-Harga[0]*2/100"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="TotalHarga[0]" expression="Harga[0]*JumlahBuku0"/>
+            <if expression="JumlahBuku1&gt;=20">
+                <then>
+                    <assign variable="Harga[1]" expression="Harga[1]-Harga[1]*12/100"/>
+                </then>
+                <else>
+                    <if expression="JumlahBuku1&gt;=10">
+                        <then>
+                            <assign variable="Harga[1]" expression="Harga[1]-Harga[1]*5/100"/>
+                        </then>
+                        <else>
+                            <if expression="JumlahBuku1&gt;=5">
+                                <then>
+                                    <assign variable="Harga[1]" expression="Harga[1]-Harga[1]*2/100"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="TotalHarga[1]" expression="Harga[1]*JumlahBuku1"/>
+            <if expression="JumlahBuku2&gt;=20">
+                <then>
+                    <assign variable="Harga[2]" expression="Harga[2]-Harga[2]*12/100"/>
+                </then>
+                <else>
+                    <if expression="JumlahBuku2&gt;=10">
+                        <then>
+                            <assign variable="Harga[2]" expression="Harga[2]-Harga[2]*5/100"/>
+                        </then>
+                        <else>
+                            <if expression="JumlahBuku2&gt;=5">
+                                <then>
+                                    <assign variable="Harga[2]" expression="Harga[2]-Harga[2]*2/100"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="TotalHarga[2]" expression="Harga[2]*JumlahBuku2"/>
+            <assign variable="TotalAkhir1" expression="TotalHarga[0]+TotalHarga[1]+TotalHarga[2]"/>
+            <output expression="ToFixed(TotalAkhir1,2)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
